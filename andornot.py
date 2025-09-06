@@ -6,9 +6,9 @@
 #else:
  #print('😞')
 
-tired = False
+# tired = False
 
-if not tired:
-    print('Leyts code')
-else:
-    print('Go to sleep')
+# if not tired:
+#     print('Lets code')
+# else:
+#     print('Go to sleep')
