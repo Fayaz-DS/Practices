@@ -1,5 +1,3 @@
-
-
 print("   Welcome to the Drive-Thru!   ")
 print("                                ")
 print("         MENU                   ")
@@ -31,4 +29,3 @@ if item2 != 0 and item2 in item_names:
     print(f"{quantity2} x {item_names[item2]}")
 print(f"Total price: ${total_price:.2f}")
 print("Thank you for your order!")
-    # ...existing code...
