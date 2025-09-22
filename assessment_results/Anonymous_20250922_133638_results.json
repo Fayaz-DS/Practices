@@ -1,0 +1,22 @@
+{
+  "participant_id": "Anonymous_20250922_133638",
+  "age_group": "young",
+  "assessment_date": "2025-09-22T13:36:38.866888",
+  "scores": {
+    "social_communication": 1.15,
+    "behavioral_patterns": 1.79,
+    "communication_language": 1.74
+  },
+  "total_score": 1.55,
+  "risk_level": "Low-Moderate",
+  "recommendations": [
+    "Consider discussing these results with a healthcare professional",
+    "Remember that every individual is unique and has their own strengths",
+    "Continue monitoring development",
+    "Share observations with healthcare providers at routine visits",
+    "Consider environmental supports if helpful",
+    "Reassess if new concerns arise",
+    "Adult services and supports may be available in your area"
+  ],
+  "confidence": 82.4
+}

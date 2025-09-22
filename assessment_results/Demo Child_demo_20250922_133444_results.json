@@ -1,0 +1,23 @@
+{
+  "participant_id": "Demo Child_demo_20250922_133444",
+  "age_group": "kid",
+  "assessment_date": "2025-09-22T13:34:44.575161",
+  "scores": {
+    "social_communication": 2.17,
+    "behavioral_patterns": 1.92,
+    "communication_language": 2.14
+  },
+  "total_score": 2.07,
+  "risk_level": "Moderate",
+  "recommendations": [
+    "Consider discussing these results with a healthcare professional",
+    "Remember that every individual is unique and has their own strengths",
+    "Discuss findings with your primary care provider",
+    "Consider a more comprehensive developmental evaluation",
+    "Monitor development and reassess in 3-6 months",
+    "Look into supportive resources and strategies",
+    "Focus on social skills development and interaction opportunities",
+    "Explore speech-language evaluation and support"
+  ],
+  "confidence": 88.7
+}
