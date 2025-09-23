@@ -1,5 +1,3 @@
-
-
 print("   Welcome to the Drive-Thru!   ")
 print("                                ")
 print("         MENU                   ")
