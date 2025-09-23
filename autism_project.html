@@ -4819,12 +4819,7 @@ Contact: For questions about this report, consult with a qualified healthcare pr
                 if (messageIndex < loadingMessages.length) {
                     if (charIndex < loadingMessages[messageIndex].length) {
                         currentMessage += loadingMessages[messageIndex].charAt(charIndex);
-                        loadingText.innerHTML = `
-                            ${currentMessage}<span style="animation: blink 1s infinite;">|</span><br>
-                            <small style="opacity: 0.6; margin-top: 10px; display: inline-block;">
-                                Building empathetic AI frameworks for understanding
-                            </small>
-                        `;
+                        loadingText.innerHTML = currentMessage + '<span style="animation: blink 1s infinite;">|</span><br><small style="opacity: 0.6; margin-top: 10px; display: inline-block;">Building empathetic AI frameworks for understanding</small>';
                         charIndex++;
                         setTimeout(typewriterEffect, 50 + Math.random() * 50);
                     } else {
@@ -5378,17 +5373,16 @@ Contact: For questions about this report, consult with a qualified healthcare pr
                 for (let i = 0; i < shapeCount; i++) {
                     const shape = document.createElement('div');
                     shape.className = 'morphing-shape';
-                    shape.style.cssText = `
-                        position: absolute;
-                        width: ${60 + Math.random() * 80}px;
-                        height: ${60 + Math.random() * 80}px;
-                        top: ${Math.random() * 100}%;
-                        left: ${Math.random() * 100}%;
-                        background: radial-gradient(circle, rgba(102, 126, 234, 0.08), rgba(240, 147, 251, 0.08));
-                        border-radius: 50%;
-                        will-change: transform;
-                        z-index: 1;
-                    `;
+                    const shapeSize = 60 + Math.random() * 80;
+                    shape.style.position = 'absolute';
+                    shape.style.width = shapeSize + 'px';
+                    shape.style.height = shapeSize + 'px';
+                    shape.style.top = Math.random() * 100 + '%';
+                    shape.style.left = Math.random() * 100 + '%';
+                    shape.style.background = 'radial-gradient(circle, rgba(102, 126, 234, 0.08), rgba(240, 147, 251, 0.08))';
+                    shape.style.borderRadius = '50%';
+                    shape.style.willChange = 'transform';
+                    shape.style.zIndex = '1';
                     heroSection.appendChild(shape);
 
                     // Simplified single rotation animation
@@ -5462,17 +5456,15 @@ Contact: For questions about this report, consult with a qualified healthcare pr
             document.querySelectorAll('.glass-card, .feature-card').forEach(card => {
                 card.addEventListener('mouseenter', () => {
                     const liquidBar = document.createElement('div');
-                    liquidBar.style.cssText = `
-                        position: absolute;
-                        top: 0;
-                        left: -100%;
-                        width: 100%;
-                        height: 100%;
-                        background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
-                        pointer-events: none;
-                        z-index: 10;
-                        will-change: transform;
-                    `;
+                    liquidBar.style.position = 'absolute';
+                    liquidBar.style.top = '0';
+                    liquidBar.style.left = '-100%';
+                    liquidBar.style.width = '100%';
+                    liquidBar.style.height = '100%';
+                    liquidBar.style.background = 'linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent)';
+                    liquidBar.style.pointerEvents = 'none';
+                    liquidBar.style.zIndex = '10';
+                    liquidBar.style.willChange = 'transform';
                     card.appendChild(liquidBar);
                     
                     gsap.to(liquidBar, {
@@ -5835,35 +5827,27 @@ Contact: For questions about this report, consult with a qualified healthcare pr
 
                 const notification = document.createElement('div');
                 notification.className = `notification notification-${type}`;
-                notification.innerHTML = `
-                    <div class="notification-content">
-                        <span class="notification-icon">
-                            ${type === 'success' ? '✓' : type === 'warning' ? '⚠' : type === 'error' ? '✕' : 'ℹ'}
-                        </span>
-                        <span class="notification-message">${message}</span>
-                    </div>
-                `;
+                const icon = type === 'success' ? '✓' : type === 'warning' ? '⚠' : type === 'error' ? '✕' : 'ℹ';
+                notification.innerHTML = '<div class="notification-content"><span class="notification-icon">' + icon + '</span><span class="notification-message">' + message + '</span></div>';
 
-                // Add notification styles
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    padding: 15px 20px;
-                    background: rgba(255, 255, 255, 0.1);
-                    backdrop-filter: blur(10px);
-                    border-radius: 10px;
-                    color: white;
-                    font-size: 14px;
-                    font-weight: 500;
-                    z-index: 100001;
-                    opacity: 0;
-                    transform: translateX(100%);
-                    transition: all 0.3s ease;
-                    max-width: 350px;
-                    word-wrap: break-word;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                `;
+                // Add notification styles  
+                notification.style.position = 'fixed';
+                notification.style.top = '20px';
+                notification.style.right = '20px';
+                notification.style.padding = '15px 20px';
+                notification.style.background = 'rgba(255, 255, 255, 0.1)';
+                notification.style.backdropFilter = 'blur(10px)';
+                notification.style.borderRadius = '10px';
+                notification.style.color = 'white';
+                notification.style.fontSize = '14px';
+                notification.style.fontWeight = '500';
+                notification.style.zIndex = '100001';
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100%)';
+                notification.style.transition = 'all 0.3s ease';
+                notification.style.maxWidth = '350px';
+                notification.style.wordWrap = 'break-word';
+                notification.style.border = '1px solid rgba(255, 255, 255, 0.2)';
 
                 document.body.appendChild(notification);
 
@@ -6145,3 +6129,24 @@ Contact: For questions about this report, consult with a qualified healthcare pr
     </div> <!-- Close main-content -->
 </body>
 </html>
+        // 3D Cursor with Performance Optimizations
+        function init3DCursor() {
+            let mouseMoveTimeout;
+            document.addEventListener('mousemove', (e) => {
+                if (mouseMoveTimeout) return;
+                mouseMoveTimeout = setTimeout(() => {
+                    const centerX = window.innerWidth / 2;
+                    const centerY = window.innerHeight / 2;
+                    const mouseX = (e.clientX - centerX) / centerX;
+                    const mouseY = (e.clientY - centerY) / centerY;
+                    
+                    // Update cursor position
+                    const cursor = document.getElementById('customCursor');
+                    if (cursor) {
+                        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                    }
+                    
+                    mouseMoveTimeout = null;
+                }, 16);
+            });
+        }
