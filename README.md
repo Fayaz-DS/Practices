@@ -36,4 +36,4 @@ My mission is to become a **highly skilled AI/ML Engineer** by August 2026 🚀.
 
 ---
 
-⭐️ *This GitHub will document my entire journey from **absolute beginner → AI/ML Engineer 30+ LPA***  
+⭐️ *This GitHub will document my entire journey from **absolute beginner → AI/ML Engineer***  
