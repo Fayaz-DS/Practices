@@ -21,4 +21,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run('MTQyMzM2ODczOTM4MTk3MzEyNA.GyKYZz.H2aqFXrLTxhLN60R6_fQ-4lkf6FzTjdHFJOIVQ') 
+client.run('bot token here') 
